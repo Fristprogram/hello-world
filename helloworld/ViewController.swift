@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             print("no socre")
         }
         print(hello)
-     updateUi()
+        updateUi()
     }
 
     var num = 0;
