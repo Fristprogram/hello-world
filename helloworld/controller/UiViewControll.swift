@@ -37,5 +37,30 @@ class UiViewControll : UIViewController{
         self.view.insertSubview(view2, belowSubview: view1)
         //
         
+        
+        let btn = UIButton(type: .custom)
+        btn.frame = CGRect(x: 100, y: 300, width: 100, height: 100)
+        btn.backgroundColor = UIColor.gray
+        btn.setTitle("点我", for: .normal)
+        btn.setTitle("点到了", for: .highlighted)
+        btn.setTitle("不能点", for: .disabled)
+       
+        btn.isEnabled = true
+        
+//        btn.setImage(UIImage(named: "repayment_ic_spin"),for: .normal)
+        
+        btn.setBackgroundImage(UIImage(named: "repayment_ic_spin"),for: .normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        
+        btn.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        self.view.addSubview(btn)
+        
+        
+        
+    }
+    
+    //所有事件方法都要带 @objc
+    @objc func buttonClick(){
+        print("被点击了")
     }
 }

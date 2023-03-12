@@ -20,6 +20,7 @@
 		FFB078E029BDC8A400904613 /* UiViewControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB078DF29BDC8A400904613 /* UiViewControll.swift */; };
 		FFB078E229BDD59C00904613 /* Labelboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB078E129BDD59C00904613 /* Labelboard.storyboard */; };
 		FFB078E529BDD5C500904613 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB078E429BDD5C500904613 /* LabelController.swift */; };
+		FFB078E729BDE87C00904613 /* repayment_ic_spin.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB078E629BDE87C00904613 /* repayment_ic_spin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FFB078DF29BDC8A400904613 /* UiViewControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControll.swift; sourceTree = "<group>"; };
 		FFB078E129BDD59C00904613 /* Labelboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Labelboard.storyboard; sourceTree = "<group>"; };
 		FFB078E429BDD5C500904613 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
+		FFB078E629BDE87C00904613 /* repayment_ic_spin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = repayment_ic_spin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				FF7A71772897857500E4764B /* AppDelegate.swift */,
 				FF7A71792897857500E4764B /* SceneDelegate.swift */,
 				FF7A71802897857600E4764B /* Assets.xcassets */,
+				FFB078E629BDE87C00904613 /* repayment_ic_spin.png */,
 				FF7A71852897857600E4764B /* Info.plist */,
 			);
 			path = helloworld;
@@ -264,6 +267,7 @@
 				FFB078DE29BDC88900904613 /* UiViewboard.storyboard in Resources */,
 				FF7A717F2897857500E4764B /* Main.storyboard in Resources */,
 				FFB078E229BDD59C00904613 /* Labelboard.storyboard in Resources */,
+				FFB078E729BDE87C00904613 /* repayment_ic_spin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
