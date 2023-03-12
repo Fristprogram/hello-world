@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class UiViewControll : UIViewController{
+class UiViewControll : UIViewController ,UITextFieldDelegate{
     
     override func viewDidLoad() {
         let view1 = UIView()
@@ -38,6 +38,86 @@ class UiViewControll : UIViewController{
         //
         
         
+        initButton()
+        
+        initTextField()
+        
+    }
+    
+    func initTextField(){
+        let textField = UITextField(frame: CGRect(x: 20, y: 50, width: 200, height: 40))
+//        textField.backgroundColor = UIColor.gray
+        //边框
+        textField.borderStyle = .roundedRect
+        //占位符
+        textField.placeholder = "请输入账号"
+        //颜色
+        textField.textColor = UIColor.blue
+        //对齐方式
+        textField.textAlignment = .center
+        //背景图片
+        textField.background = UIImage(named: "repayment_ic_spin")
+        //清空按钮
+        textField.clearButtonMode = .always
+        //左侧或右侧自定义view
+        let view1 = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 40))
+        view1.backgroundColor = UIColor.blue
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 40))
+        label.text = "+86"
+        label.textColor = UIColor.white
+        view1.addSubview(label)
+        textField.leftView = view1
+        textField.leftViewMode = .always
+        //textField 有很多回调，通过代理方式传给我们
+        textField.delegate = self
+        //
+        
+        
+        
+        self.view.addSubview(textField)
+    }
+    //点击清除按钮
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        //return false 失效
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+//失去焦点
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("将要编辑")
+        return true
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("开始编辑")
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("将要退出编辑")
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("已经退出")
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("将要改变")
+    
+        return true
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        print(textField.text)
+    }
+    func initButton(){
         let btn = UIButton(type: .custom)
         btn.frame = CGRect(x: 100, y: 300, width: 100, height: 100)
         btn.backgroundColor = UIColor.gray
@@ -54,11 +134,7 @@ class UiViewControll : UIViewController{
         
         btn.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         self.view.addSubview(btn)
-        
-        
-        
     }
-    
     //所有事件方法都要带 @objc
     @objc func buttonClick(){
         print("被点击了")
