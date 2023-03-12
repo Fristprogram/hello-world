@@ -16,6 +16,10 @@
 		FF7A718F2897857600E4764B /* helloworldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A718E2897857600E4764B /* helloworldTests.swift */; };
 		FF7A71992897857600E4764B /* helloworldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A71982897857600E4764B /* helloworldUITests.swift */; };
 		FF7A719B2897857600E4764B /* helloworldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7A719A2897857600E4764B /* helloworldUITestsLaunchTests.swift */; };
+		FFB078DE29BDC88900904613 /* UiViewboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB078DD29BDC88900904613 /* UiViewboard.storyboard */; };
+		FFB078E029BDC8A400904613 /* UiViewControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB078DF29BDC8A400904613 /* UiViewControll.swift */; };
+		FFB078E229BDD59C00904613 /* Labelboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB078E129BDD59C00904613 /* Labelboard.storyboard */; };
+		FFB078E529BDD5C500904613 /* LabelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB078E429BDD5C500904613 /* LabelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		FF7A71942897857600E4764B /* helloworldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helloworldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF7A71982897857600E4764B /* helloworldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloworldUITests.swift; sourceTree = "<group>"; };
 		FF7A719A2897857600E4764B /* helloworldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helloworldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FFB078DD29BDC88900904613 /* UiViewboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UiViewboard.storyboard; sourceTree = "<group>"; };
+		FFB078DF29BDC8A400904613 /* UiViewControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControll.swift; sourceTree = "<group>"; };
+		FFB078E129BDD59C00904613 /* Labelboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Labelboard.storyboard; sourceTree = "<group>"; };
+		FFB078E429BDD5C500904613 /* LabelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,11 @@
 		FF7A71762897857500E4764B /* helloworld */ = {
 			isa = PBXGroup;
 			children = (
+				FFB078DC29BDC73C00904613 /* storyboard */,
+				FFB078DB29BDC72C00904613 /* controller */,
 				FF7A71772897857500E4764B /* AppDelegate.swift */,
 				FF7A71792897857500E4764B /* SceneDelegate.swift */,
-				FF7A717B2897857500E4764B /* ViewController.swift */,
-				FF7A717D2897857500E4764B /* Main.storyboard */,
 				FF7A71802897857600E4764B /* Assets.xcassets */,
-				FF7A71822897857600E4764B /* LaunchScreen.storyboard */,
 				FF7A71852897857600E4764B /* Info.plist */,
 			);
 			path = helloworld;
@@ -125,6 +132,27 @@
 				FF7A719A2897857600E4764B /* helloworldUITestsLaunchTests.swift */,
 			);
 			path = helloworldUITests;
+			sourceTree = "<group>";
+		};
+		FFB078DB29BDC72C00904613 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF7A717B2897857500E4764B /* ViewController.swift */,
+				FFB078DF29BDC8A400904613 /* UiViewControll.swift */,
+				FFB078E429BDD5C500904613 /* LabelController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		FFB078DC29BDC73C00904613 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FF7A717D2897857500E4764B /* Main.storyboard */,
+				FF7A71822897857600E4764B /* LaunchScreen.storyboard */,
+				FFB078DD29BDC88900904613 /* UiViewboard.storyboard */,
+				FFB078E129BDD59C00904613 /* Labelboard.storyboard */,
+			);
+			path = storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +261,9 @@
 			files = (
 				FF7A71842897857600E4764B /* LaunchScreen.storyboard in Resources */,
 				FF7A71812897857600E4764B /* Assets.xcassets in Resources */,
+				FFB078DE29BDC88900904613 /* UiViewboard.storyboard in Resources */,
 				FF7A717F2897857500E4764B /* Main.storyboard in Resources */,
+				FFB078E229BDD59C00904613 /* Labelboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF7A717C2897857500E4764B /* ViewController.swift in Sources */,
+				FFB078E529BDD5C500904613 /* LabelController.swift in Sources */,
+				FFB078E029BDC8A400904613 /* UiViewControll.swift in Sources */,
 				FF7A71782897857500E4764B /* AppDelegate.swift in Sources */,
 				FF7A717A2897857500E4764B /* SceneDelegate.swift in Sources */,
 			);

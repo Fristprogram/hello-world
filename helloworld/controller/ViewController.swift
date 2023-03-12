@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
     
+    @IBOutlet weak var labelBtn: UIButton!
+    
+    @IBOutlet weak var uiviewBtn: UIButton!
     var intNum = 0
     var doubleNum :Double = 0.0
     var step = 1
@@ -41,6 +44,21 @@ class ViewController: UIViewController {
     }
 
     var num = 0;
+   
+    @IBAction func uiViewClick(_ sender: Any) {
+        let sb = UIStoryboard(name: "UiViewboard", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Uiview") as! UiViewControll
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true,completion: nil)
+    }
+    
+    @IBAction func labelBtnClick(_ sender: Any) {
+        let sb = UIStoryboard(name: "Labelboard", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "labelId") as! LabelController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true,completion: nil)
+    }
+    
     
     @IBAction func clickBtn(_ sender: UIButton) {
         print("click btn")
